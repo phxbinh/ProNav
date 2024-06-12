@@ -8,6 +8,13 @@
 	<link rel="stylesheet" href="./style/nav.css">
 	<!--========= REMIXICONS =========-->
 	<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+	<!-- Script outside js file for project -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+	<!-- Can not right click, prevent cut copy action -->
+
+</head>
+
 </head>
 
 <body>
@@ -38,7 +45,7 @@
 		<!-- CONTENTS -->
 		<main>
 			<div class="root__main" id="root-main">
-				<h2 class="title">Navigation bar</h2>
+				<h1 class="title">Kinh trung bộ</h1>
 				<p> <br>
 					Tập Kinh Trung Bộ (Majjhima Nikàya) gồm 152 kinh tất cả, chia thành 3 tập : tập I, gồm 50 Kinh đầu, tập II gồm 50 Kinh tiếp và tập III, gồm 52 Kinh chót. <br> <br>
 
@@ -64,6 +71,26 @@
 		 </footer>
 
 	</div> <!-- End div root -->
+
+
+
+
+
+	<script>
+		// Prevent Right click action
+		$(document).ready(function() {
+			$("main").on("contextmenu", function(e) {
+					return false;
+			});
+		});
+
+		// Prevent Cut Copy action
+		$(document).ready(function() {
+			$('main').bind('cut copy', function(e) {
+					e.preventDefault();
+			});
+		});
+	</script>
 
 </body>
 </html>
