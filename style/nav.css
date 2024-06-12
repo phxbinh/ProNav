@@ -29,7 +29,7 @@ Link github: https://github.com/bedimcode/responsive-dropdown-menu-2
 	/*===== Header config =====*/
 	--background-color-nav:hsl(123, 85%, 21%);
 	--font-color-nav: hsl(0, 25%, 90%);
-	--font-size-nav: 0.8rem;
+	--font-size-nav: 1rem;
 	/*===== nav__data nav__menu*/
 	--padding: 0.25rem;
 	/*===== Change color hover menu =====*/
@@ -93,28 +93,16 @@ a {
 /*===== Xuan Binh =====*/
 .nav__logo{
 	flex: 1;
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
 }
-.nav__logo a{
-	height: 100%;
-	flex: 1;
-	color: var(--font-color-nav);
-	font-size: 1rem;
-	font-weight: 700;
-	text-align: center;
+.logo__name {
 	padding-top: 8px;
-	transition: background-color 0.3s;
-}
-.nav__logo a:hover{
-	cursor: pointer;
-	background-color: var(--background-color-hover);
 }
 
-/*===== Buffer =====*/
-.buffer {
-	width: 1px;
+.logo__name a{
+	color: var(--font-color-nav);
+	font-size: 1.1rem;
+	font-weight: 700;
+	padding-left: 8px;	
 }
 
 /*===== Burger menu =====*/
@@ -127,8 +115,6 @@ a {
 	flex:3;
 	background-color: var(--background-color-nav);
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	flex-direction: row;
 }
 .nav__menu ul{
@@ -142,22 +128,18 @@ a {
 }
 .nav__menu li {
 	flex: 1;
-	height: 100%;
-	justify-content: center;
 	text-align: center;
+	padding: 8px 0 8px 0;
 	transition: background-color 0.3s;
-	padding: 8px 0 8px 0;	
 }
 
 .nav__menu li a{
 	color: var(--font-color);	
-	height: 100%;
 	font-size: var(--font-size-nav);
 }
-.nav__menu li:hover {
-	color: white;
+.nav__menu li:hover {	
 	background-color: var(--background-color-hover);
-		cursor: pointer;
+	cursor: pointer;
 }
 
 
@@ -167,75 +149,34 @@ a {
 main {
 	background-color: var(--main-background);
 	height: 100%;
-	width: 100%;
 	overflow-y: auto;
-	font-family: var(--main-font-family);
+	font-family: var(--main-font-family);	
+	padding: 5px 12px 5px 15px;
+}
+
+.root__main{
 	color: var(--main-font-color);
 	font-size: var(--main-font-size);
-	padding: 5px 15px 5px 15px;
-}
-.root__main{
-	width: 100%;
 	text-align: var(--main-text-align);
 }
 
-
-
-@media screen and (width <= 700px) {
-
-	/* .buffer {
-		flex: 0;
-	}
-	.nav__logo{
-		flex: 1.5;
-	} */
-
-	/* .nav__logo a{
-		font-size: 1rem;
-		padding-top: 8px;
-	} */
-
-	/* .nav__menu li a{
-		font-size: .8rem;
-		}
-	.nav__menu li {
-		padding: 5px 0 2px 0;	
-	} */
-
-}
-
+/*== Used for burger menu icon*/
 @media screen and (width <= 550px) {
 	.nav__menu {
 		display: none;
 	}
 	.burger__menu {
+		/* flex: 1; */
 		display: flex;
 		justify-content: flex-end;
-		flex: 1;
-		padding: 10px 20px 10px 10px;
+		padding: 5px 15px 5px 5px;
+		font-size: 25px;
 	}
 	.burger__menu i:hover {
 		cursor: pointer;
 		background-color: var(--background-color-hover);
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*========= FOOTER =========*/
@@ -245,5 +186,5 @@ footer{
 	justify-content: center;
 	text-align: center;
 	font-size: 10px;
-	padding: 2px 0 2px 0;
+	padding: 5px 0 2px 0;
 }
