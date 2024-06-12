@@ -15,30 +15,34 @@
 
 </head>
 
-</head>
-
 <body>
 	<div class="root" id="root">
 		<!-- NAVIGATION BAR -->
 		<header class="nav__header" id="nav-header">
 			<nav>
-				<!-- About -->
-				<div class="nav__data" id="nav-data">
+				<!-- Logo -->
+				<div class="nav__logo" id="nav-logo">
 					<a href="#">
 						<i class="ri-planet-line">
 						</i>
 						Xuan Binh
 					</a>
+				<div class="buffer"></div>
 				</div>
 				<!-- Menu -->
 				<div class="nav__menu" id="nav-menu">
 					<ul class="nav__list" id="nav-list">
 						<li><a href="#" class="nav__link">Home</a></li>
-						<li><a href="#" class="nav__link">Services</a></li>
+						
+						<li><a href="#" class="nav__link">Users</a>
+						<i class="ri-arrow-down-s-line"></i>
+						</li>			
+
 						<li><a href="#" class="nav__link">Products</a></li>
 						<li><a href="#" class="nav__link">Contact</a></li>
 					</ul>
-				</div>
+				</div> <!--End nav_menu-->
+				<div class="burger__menu"><i class="ri-menu-line nav__burger"></i></div>
 			</nav>
 		</header>
 
@@ -72,12 +76,9 @@
 
 	</div> <!-- End div root -->
 
-
-
-
-
 	<script>
-		// Prevent Right click action
+	
+			// Prevent Right click action
 		$(document).ready(function() {
 			$("main").on("contextmenu", function(e) {
 					return false;

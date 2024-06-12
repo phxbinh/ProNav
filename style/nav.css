@@ -23,7 +23,7 @@ Link github: https://github.com/bedimcode/responsive-dropdown-menu-2
 
 	/*===== Body config =====*/
 	--font-farmily: "Mohave", sans-serif;
-	--font-color: hsl(0, 17%, 91%);
+	--font-color: hsl(0, 30%, 93%);
 	--font-size: 1rem;
 
 	/*===== Header config =====*/
@@ -33,11 +33,11 @@ Link github: https://github.com/bedimcode/responsive-dropdown-menu-2
 	/*===== nav__data nav__menu*/
 	--padding: 0.25rem;
 	/*===== Change color hover menu =====*/
-	--color-hover: rgb(233, 245, 11);
-	--font-size-hover: 1.5rem;
+	--color-hover: rgb(76, 84, 47);
+	--background-color-hover: rgb(18, 114, 31);
 
 	/*===== MAIN CONTENTS =====*/
-	--main-background: rgb(236, 236, 210);
+	--main-background: rgb(221, 221, 197);
 	--main-font-family:"Sawarabi", sans-serif;
 	--main-font-size:0.2rem;
 	--main-font-color:black;
@@ -46,7 +46,7 @@ Link github: https://github.com/bedimcode/responsive-dropdown-menu-2
 
 /*========= BODY CONFIG =========*/
 body {
-	background-color: hsl(0, 3%, 72%);
+	background-color: rgb(255, 255, 255);
 	color: var(--font-color);
 	font-size: var(--font-size);
 	font-family: var(--font-farmily);
@@ -63,64 +63,105 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	border: 1.5px solid hsl(123, 78%, 23%);
+	box-shadow: 0 10px 10px rgb(30, 4, 4);
+}
+
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
 }
 
 /*========= HEADER =========*/
+/*Thẻ này chứa toàn bộ items của menu*/
 .nav__header {
 	width: 100%;
+	height: 45px;
 }
+/*nav là thanh chứa các thuộc tính để điều hướng trên menu*/
 .nav__header nav{
 	background-color: var(--background-color-nav);
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	/* position: absolute; */
-}
-/*===== About =====*/
-.nav__data{
-	flex: 1;
-	padding: var(--padding);
-	height: 2rem;
-}
-.nav__data a{
-	color: var(--font-color-nav);
-	font-size: var(--font-size-nav);
-	text-decoration:none;
-	padding-left: 1.5rem;
-	font-weight: 500;
-}
-.nav__data a:hover{
-	color: var(--color-hover);
-}
-/*===== Menu =====*/
-.nav__menu {
-	background-color: var(--background-color-nav);
-	flex: 2;
-}
-.nav__menu ul{
-	display: flex;
-	flex-direction: row;
-	padding: var(--padding);
-	justify-content: center;
-	align-items: center;
-}
-.nav__menu li {
-	list-style: none;
-	flex:1;
-	text-align: center;
-}
-.nav__menu li a {
-	color: var(--font-color-nav);
-	font-size: var(--font-size-nav);
-	text-decoration:none;
-	font-weight: 500;
+	justify-content: center;	
+	width: 100%;
+	height: 100%;
 }
 
-/*===== Hover menu list nav =====*/
-.nav__menu li a:hover {
-	color: var(--color-hover);
-	font-weight: bold;
+/*===== Xuan Binh =====*/
+.nav__logo{
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
+.nav__logo a{
+	height: 100%;
+	flex: 1;
+	color: var(--font-color-nav);
+	font-size: 1rem;
+	font-weight: 700;
+	text-align: center;
+	padding-top: 8px;
+	transition: background-color 0.3s;
+}
+.nav__logo a:hover{
+	cursor: pointer;
+	background-color: var(--background-color-hover);
+}
+
+/*===== Buffer =====*/
+.buffer {
+	width: 1px;
+}
+
+/*===== Burger menu =====*/
+.burger__menu{
+	display: none;
+}
+
+/*===== Menu =====*/
+.nav__menu {
+	flex:3;
+	background-color: var(--background-color-nav);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+}
+.nav__menu ul{
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	transition: background-color 0.3s;
+}
+.nav__menu li {
+	flex: 1;
+	height: 100%;
+	justify-content: center;
+	text-align: center;
+	transition: background-color 0.3s;
+	padding: 8px 0 8px 0;	
+}
+
+.nav__menu li a{
+	color: var(--font-color);	
+	height: 100%;
+	font-size: var(--font-size-nav);
+}
+.nav__menu li:hover {
+	color: white;
+	background-color: var(--background-color-hover);
+		cursor: pointer;
+}
+
+
+
 
 /*========= MAIN CONTENTS =========*/
 main {
@@ -137,6 +178,63 @@ main {
 	width: 100%;
 	text-align: var(--main-text-align);
 }
+
+
+
+@media screen and (width <= 700px) {
+
+	/* .buffer {
+		flex: 0;
+	}
+	.nav__logo{
+		flex: 1.5;
+	} */
+
+	/* .nav__logo a{
+		font-size: 1rem;
+		padding-top: 8px;
+	} */
+
+	/* .nav__menu li a{
+		font-size: .8rem;
+		}
+	.nav__menu li {
+		padding: 5px 0 2px 0;	
+	} */
+
+}
+
+@media screen and (width <= 550px) {
+	.nav__menu {
+		display: none;
+	}
+	.burger__menu {
+		display: flex;
+		justify-content: flex-end;
+		flex: 1;
+		padding: 10px 20px 10px 10px;
+	}
+	.burger__menu i:hover {
+		cursor: pointer;
+		background-color: var(--background-color-hover);
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
